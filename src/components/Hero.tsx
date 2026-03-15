@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { Link, useLocation } from "wouter";
 import { ArrowRight, FileText, Shield, Brain, Link2, Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import aidagLogo from "@assets/soulwareai_1770572.png";
-import soulwareAI from "@assets/soulwareai_1770572.png";
+import aidagLogo from "@assets/logo.png";
+import soulwareAI from "@assets/logo.png";
 
 function useCounter(end: number, duration: number = 2000, prefix: string = "", suffix: string = "") {
   const [value, setValue] = useState(0);

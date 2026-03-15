@@ -563,7 +563,7 @@ export default function DeployContract() {
                 <CardContent className="space-y-4">
                   <div className="flex items-center gap-4 p-4 rounded-md bg-muted/20 border border-muted/30">
                     <img
-                      src="/soulwareai_1770572.png"
+                      src="/logo.png"
                       alt="AIDAG Logo"
                       className="w-16 h-16 rounded-md"
                       data-testid="img-aidag-logo"
@@ -612,8 +612,8 @@ export default function DeployContract() {
 
                     <div className="grid grid-cols-1 gap-2 pt-2">
                       <a
-                        href="/soulwareai_1770572.png"
-                        download="soulwareai_1770572.png"
+                        href="/logo.png"
+                        download="logo.png"
                         className="w-full"
                       >
                         <Button variant="outline" className="w-full" data-testid="button-download-logo">

@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { SiX, SiTelegram, SiDiscord, SiGithub } from "react-icons/si";
-import aidagLogo from "@assets/soulwareai_1770572.png";
+import aidagLogo from "@assets/logo.png";
 import { useTranslation } from "react-i18next";
 
 export default function Footer() {
