@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link, useLocation } from "wouter";
 import { ArrowRight, FileText, Shield, Brain, Link2, Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import aidagLogo from "@assets/aidag-logo_1770572833982.jpg";
+import aidagLogo from "@assets/aidag-logo_1770572833982.png";
 import soulwareAI from "@assets/soulwareai_1770572834003.jpeg";
 
 function useCounter(end: number, duration: number = 2000, prefix: string = "", suffix: string = "") {

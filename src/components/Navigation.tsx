@@ -11,7 +11,7 @@ import { useWallet } from "@/lib/walletContext";
 import { BSC_CHAIN_ID } from "@/lib/web3Config";
 import { useTranslation } from "react-i18next";
 import { supportedLanguages } from "@/lib/i18n";
-import aidagLogo from "@assets/aidag-logo_1770572833982.jpg";
+import aidagLogo from "@assets/aidag-logo_1770572833982.png";
 
 interface NavItem {
   name: string;
