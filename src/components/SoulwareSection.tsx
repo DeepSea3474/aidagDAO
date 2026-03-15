@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Bot, Cpu, RefreshCw, Sparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import soulwareAI from "@assets/soulwareai_1770572834003.jpeg";
+import soulwareAI from "@assets/soulwareai_1770572.png";
 
 export default function SoulwareSection() {
   const { t } = useTranslation();
