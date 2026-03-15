@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIDAG-CHAIN | DeepSea3474 Karargahı</title>
+    <style>
+        body { background-color: #0a0a0a; color: #00ff41; font-family: 'Courier New', monospace; padding: 20px; text-align: center; }
+        .header { border-bottom: 2px solid #00ff41; padding-bottom: 20px; margin-bottom: 30px; }
+        .mimar { color: #fff; text-shadow: 0 0 10px #00ff41; font-size: 1.5em; }
+        .block-card { background: #1a1a1a; border: 1px solid #333; border-left: 5px solid #00ff41; margin: 20px auto; padding: 20px; max-width: 800px; text-align: left; transition: 0.3s; }
+        .block-card:hover { border-color: #fff; box-shadow: 0 0 15px rgba(0,255,65,0.2); }
+        .hash { font-size: 0.8em; color: #888; overflow-wrap: break-word; }
+        .ceo-msg { color: #fff; font-style: italic; margin-top: 10px; font-size: 1.1em; }
+        .footer { margin-top: 50px; font-size: 0.7em; color: #444; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔱 AIDAG-CHAIN LIVE</h1>
+        <div class="mimar">Mimar: DeepSea3474</div>
+        <p>Soulware AI Otonom Madencilik Sistemi Aktif</p>
+    </div>
+
+    <div id="blockchain">
+        </div>
+
+    <script>
+        fetch('blocks.json')
+            .then(response => response.text())
+            .then(data => {
+                const container = document.getElementById('blockchain');
+                const lines = data.trim().split('\n').reverse();
+                lines.forEach(line => {
+                    const block = JSON.parse(line);
+                    container.innerHTML += `
+                        <div class="block-card">
+                            <div class="hash"># HASH: ${block.hash}</div>
+                            <div class="ceo-msg">" ${block.msg} "</div>
+                            <div style="font-size: 0.7em; margin-top:10px; color:#555;">Zaman: ${block.time}</div>
+                        </div>
+                    `;
+                });
+            });
+    </script>
+
+    <div class="footer">DeepSea3474 | Powered by GPT-4o & Soulware AI</div>
+</body>
+</html>
