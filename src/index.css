@@ -1,13 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Space+Mono:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: 240 10% 3.9%;
-  --foreground: 0 0% 98%;
+  font-family: 'Inter', sans-serif;
+  background-color: #020202;
+  color: #fff;
 }
 
-body {
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
+@layer utilities {
+  /* Aidag-Chain Özel: Koyu Mavi Parlayan Yazı */
+  .text-aidag-glow {
+    color: #fff;
+    text-shadow: 
+      0 0 10px rgba(6, 182, 212, 0.7),
+      0 0 20px rgba(6, 182, 212, 0.5),
+      0 0 30px rgba(59, 130, 246, 0.5);
+  }
+  
+  /* Logodaki Parlayıp Sönen Işık Animasyonu */
+  @keyframes logo-shine {
+    0%, 100% { opacity: 1; filter: brightness(1) drop-shadow(0 0 5px rgba(6,182,212,0.5)); }
+    50% { opacity: 0.8; filter: brightness(1.3) drop-shadow(0 0 20px rgba(6,182,212,1)); }
+  }
+  .animate-logo-shine {
+    animation: logo-shine 3s ease-in-out infinite;
+  }
+  
+  /* Glassmorphism (Buzlu Cam) Efekti */
+  .glass {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
 }
