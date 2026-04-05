@@ -1,29 +1,14 @@
-import { useEffect } from "react";
-import "../lib/i18n";
-import '../styles/globals.css'
-import '../styles/components.css'
-import Head from 'next/head'
+import { useEffect } from 'react';
+import '../styles/globals.css';
+import { initWeb3Modal } from '../lib/web3modal';
 
-export default function App({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    const initModal = async () => {
-      try {
-        const { initWeb3Modal } = await import('../lib/web3modal');
-        initWeb3Modal();
-      } catch (error) {
-        console.error('Failed to initialize Web3Modal:', error);
-      }
-    };
-    initModal();
+    // Sayfa yüklenir yüklenmez cüzdan motorunu ateşle
+    initWeb3Modal();
   }, []);
 
-  return (
-    <>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <Component {...pageProps} />
-    </>
-  )
+  return <Component {...pageProps} />;
 }
+
+export default MyApp;
