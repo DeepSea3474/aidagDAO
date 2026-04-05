@@ -4,8 +4,10 @@ import { initWeb3Modal } from '../lib/web3modal';
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    // Sayfa yüklenir yüklenmez cüzdan motorunu ateşle
-    initWeb3Modal();
+    // Cüzdan motorunu güvenli bir şekilde başlat
+    if (typeof window !== 'undefined') {
+      initWeb3Modal();
+    }
   }, []);
 
   return <Component {...pageProps} />;
