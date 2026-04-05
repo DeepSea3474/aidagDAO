@@ -9,6 +9,10 @@
     "export": "next build"
   },
   "dependencies": {
+    "@reown/appkit": "latest",
+    "@reown/appkit-adapter-ethers": "latest",
+    "@tanstack/react-query": "latest",
+    "ethers": "^6.0.0",
     "@coinbase/wallet-sdk": "^4.3.7",
     "@walletconnect/ethereum-provider": "^2.23.3",
     "@walletconnect/web3-provider": "^1.8.0",
