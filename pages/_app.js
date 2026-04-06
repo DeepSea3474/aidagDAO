@@ -1,16 +1,6 @@
-import { useEffect } from 'react';
-import '../styles/globals.css';
-import { initWeb3Modal } from '../lib/web3modal';
+import "../styles/globals.css";
+import "../i18n";
 
-function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    // Cüzdan motorunu güvenli bir şekilde başlat
-    if (typeof window !== 'undefined') {
-      initWeb3Modal();
-    }
-  }, []);
-
+export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
-
-export default MyApp;

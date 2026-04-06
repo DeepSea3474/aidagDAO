@@ -1,0 +1,28 @@
+/* Kurumsal hover animasyonu */
+.hover-fade {
+  transition: all 0.18s ease-out;
+}
+
+.hover-fade:hover {
+  opacity: 0.85;
+}
+
+/* Kart hover animasyonu */
+.card-hover {
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+
+/* Icon hover animasyonu */
+.icon-hover {
+  transition: color 0.15s ease-out, transform 0.15s ease-out;
+}
+
+.icon-hover:hover {
+  transform: scale(1.08);
+  color: #a5b4fc;
+}
