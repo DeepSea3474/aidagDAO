@@ -9,9 +9,6 @@
     "export": "next build"
   },
   "dependencies": {
-    "wagmi": "^2.9.0",
-    "viem": "^2.7.0",
-    "@rainbow-me/rainbowkit": "^1.3.0",
     "drizzle-zod": "^0.8.3",
     "i18next": "^25.10.10",
     "lucide-react": "^0.562.0",
@@ -20,7 +17,6 @@
     "openai": "^6.16.0",
     "p-limit": "^7.2.0",
     "p-retry": "^7.1.1",
-    "porto": "^0.2.37",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-i18next": "^16.6.6",
