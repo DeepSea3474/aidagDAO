@@ -1,15 +1,15 @@
 import "../styles/globals.css";
 import React, { useEffect, useState } from 'react';
-import { wagmiAdapter } from "../lib/wallet";
 import { WagmiProvider } from 'wagmi';
+import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { wagmiConfig } from "../lib/wallet";
 
 const queryClient = new QueryClient();
 
 export default function App({ Component, pageProps }) {
   const [mounted, setMounted] = useState(false);
-  
-  // Hydration hatalarını (HTML/React uyumsuzluğu) önlemek için
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -17,9 +17,11 @@ export default function App({ Component, pageProps }) {
   if (!mounted) return null;
 
   return (
-    <WagmiProvider config={wagmiAdapter.wagmiConfig}>
+    <WagmiProvider config={wagmiConfig}>
       <QueryClientProvider client={queryClient}>
-        <Component {...pageProps} />
+        <RainbowKitProvider>
+          <Component {...pageProps} />
+        </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
   );
