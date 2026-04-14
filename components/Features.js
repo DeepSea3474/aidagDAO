@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 // Mevcut çeviri dosyalarını içe aktarıyoruz
-import tr from '../locales/tr.json';
-import en from '../locales/en.json';
+import tr from '../public/locales/tr/common.json';
+import en from '../public/locales/en/common.json';
 
 export default function Features() {
   const { locale } = useRouter();

@@ -1,20 +1,37 @@
 import Layout from "../components/Layout";
-import Card from "../components/Card";
-import { Icons } from "../components/Icons";
+import Header from "../components/Header";
+import Features from "../components/Features";
+import LiveStats from "../components/LiveStats";
+import SecuritySection from "../components/SecuritySection";
+import SoulwareSection from "../components/SoulwareSection";
+import Partners from "../components/Partners";
+import SmartAssistant from "../components/SmartAssistant";
 
 export default function Home() {
   return (
     <Layout>
-      <h1 className="text-4xl font-bold mb-8 flex items-center gap-3">
-        <Icons.Home className="w-7 h-7" />
-        A‑DAG Protocol
-      </h1>
+      {/* Sitenin profesyonel giriş bölümü */}
+      <Header />
+      
+      <div className="space-y-24 pb-20">
+        {/* Canlı blockchain verileri */}
+        <LiveStats />
+        
+        {/* Teknik özellikler ve Aidag-Chain mekaniği */}
+        <Features />
+        
+        {/* Yapay zeka ve Soulware entegrasyonu */}
+        <SoulwareSection />
+        
+        {/* Güvenlik katmanı */}
+        <SecuritySection />
+        
+        {/* Partnerler ve Ekosistem */}
+        <Partners />
+      </div>
 
-      <Card>
-        <p className="text-slate-400">
-          Welcome to the A‑DAG ecosystem. Explore DAO governance, presale, and documentation.
-        </p>
-      </Card>
+      {/* Akıllı asistan - Gerçek fonksiyonellik */}
+      <SmartAssistant />
     </Layout>
   );
 }

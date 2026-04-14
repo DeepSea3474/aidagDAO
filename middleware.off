@@ -1,0 +1,33 @@
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+
+const locales = ["en", "tr", "es", "fr", "de", "pt", "ru", "ar", "ja", "zh"];
+const defaultLocale = "en";
+
+export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  const pathnameIsMissingLocale = locales.every(
+    (locale) => !pathname.startsWith(`/${locale}`)
+  );
+
+  if (pathnameIsMissingLocale) {
+    const browserLang = request.headers
+      .get("accept-language")
+      ?.split(",")[0]
+      .split("-")[0];
+
+    const locale = locales.includes(browserLang || "")
+      ? browserLang
+      : defaultLocale;
+
+    return NextResponse.redirect(new URL(`/${locale}${pathname}`, request.url));
+  }
+
+  return NextResponse.next();
+}
+
+export const config = {
+  matcher: ["/((?!_next|favicon.ico).*)"],
+};
+
