@@ -13,7 +13,7 @@ const TIPS = {
     { type: "tip", title: "Revenue Split", message: "60% goes to founder wallet, 40% to DAO/Liquidity - all managed autonomously by SoulwareAI." }
   ],
   dao: [
-    { type: "info", title: "DAO Membership", message: "Pay $5 to become a DAO member. You'll be able to create proposals and vote." },
+    { type: "info", title: "DAO Membership", message: "Pay $10 to become a DAO member. You'll be able to create proposals and vote." },
     { type: "tip", title: "Voting Power", message: "Your voting power equals your AIDAG token balance. 1 AIDAG = 1 Vote." },
     { type: "warning", title: "No Human Intervention", message: "All DAO decisions are executed by SoulwareAI autonomously. No founder intervention." }
   ],

@@ -1,97 +1,54 @@
-export default function SecuritySection({ id = "security" }) {
-  const securityFeatures = [
-    {
-      icon: "🔐",
-      title: "Quantum Güvenlik",
-      description: "Gelecekteki kuantum bilgisayar tehditlerine karşı quantum-resistant algoritmalar kullanıyoruz.",
-      color: "from-cyan-500 to-blue-600"
-    },
-    {
-      icon: "🛡️",
-      title: "Denetlenmiş Kontratlar",
-      description: "Tüm akıllı kontratlar bağımsız güvenlik firmaları tarafından denetlenmiştir.",
-      color: "from-green-500 to-emerald-600"
-    },
-    {
-      icon: "🔒",
-      title: "Likidite Kilidi",
-      description: "Likidite havuzu 1 yıl boyunca kilitli. Rug-pull riski yok.",
-      color: "from-purple-500 to-pink-600"
-    },
-    {
-      icon: "⚡",
-      title: "Otonom Güvenlik",
-      description: "SoulwareAI 7/24 güvenlik izlemesi yapar. Anormal işlemleri otomatik tespit eder.",
-      color: "from-yellow-500 to-orange-600"
-    }
-  ];
-
-  const audits = [
-    { name: "Certik", status: "Tamamlandı", score: "94/100" },
-    { name: "Hacken", status: "Devam Ediyor", score: "-" },
-    { name: "PeckShield", status: "Planlandı", score: "-" }
-  ];
-
+export default function SecuritySection({ id = "features" }) {
   return (
     <section id={id} className="py-16 px-4 relative overflow-hidden scroll-mt-20">
-      <div className="absolute inset-0 bg-gradient-to-b from-cyan-900/10 via-transparent to-purple-900/10 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-900/5 via-transparent to-cyan-900/5 pointer-events-none"></div>
       
-      <div className="max-w-6xl mx-auto relative">
+      <div className="max-w-5xl mx-auto relative">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-green-500/20 border border-green-500/30 text-green-400 text-sm px-4 py-2 rounded-full mb-4">
-            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-            Güvenlik Önceliğimizdir
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            <span className="logo-aidag">Quantum</span>{" "}
-            <span className="text-white">Güvenlik</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" style={{textShadow: '0 0 30px rgba(139, 92, 246, 0.2), 0 0 60px rgba(139, 92, 246, 0.1)'}}>
+            Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Technology</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            AIDAG Chain, kripto dünyasının en güvenli projelerinden biri olmak için tasarlandı. 
-            Geleceğin tehditlerine bugünden hazırız.
-          </p>
         </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {securityFeatures.map((feature, index) => (
-            <div 
-              key={index}
-              className="card-neon p-6 text-center group hover:scale-105 transition-all duration-300"
-            >
-              <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center text-3xl shadow-lg group-hover:shadow-xl transition-shadow`}>
-                {feature.icon}
-              </div>
-              <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>
-              <p className="text-gray-400 text-sm">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="card-neon p-8">
-          <h3 className="text-xl font-bold text-white text-center mb-6">Güvenlik Denetimleri</h3>
-          
-          <div className="grid md:grid-cols-3 gap-4">
-            {audits.map((audit, index) => (
-              <div 
-                key={index}
-                className="bg-gray-800/50 border border-gray-700 rounded-xl p-4 text-center"
-              >
-                <h4 className="text-white font-semibold mb-2">{audit.name}</h4>
-                <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs ${
-                  audit.status === "Tamamlandı" ? "bg-green-500/20 text-green-400" :
-                  audit.status === "Devam Ediyor" ? "bg-yellow-500/20 text-yellow-400" :
-                  "bg-gray-700 text-gray-400"
-                }`}>
-                  {audit.status === "Tamamlandı" && "✓"}
-                  {audit.status === "Devam Ediyor" && "●"}
-                  {audit.status === "Planlandı" && "○"}
-                  <span>{audit.status}</span>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="security-card-glow bg-gray-900/80 border border-gray-800 rounded-2xl p-8 hover:border-purple-500/40 transition-all relative overflow-hidden group">
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 rounded-2xl" style={{background: 'linear-gradient(135deg, rgba(139,92,246,0.1) 0%, transparent 50%, rgba(6,182,212,0.1) 100%)', opacity: 0}} />
+            <div className="relative">
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-14 h-14 bg-purple-500/10 border border-purple-500/30 rounded-xl flex items-center justify-center" style={{boxShadow: '0 0 25px rgba(139, 92, 246, 0.2), inset 0 0 15px rgba(139, 92, 246, 0.05)'}}>
+                  <svg className="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{filter: 'drop-shadow(0 0 8px rgba(139, 92, 246, 0.7))'}}>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
                 </div>
-                {audit.score !== "-" && (
-                  <p className="text-cyan-400 font-bold mt-2">{audit.score}</p>
-                )}
+                <span className="text-xs font-bold text-purple-400 bg-purple-500/10 border border-purple-500/20 px-3 py-1 rounded-full" style={{boxShadow: '0 0 10px rgba(139, 92, 246, 0.15)'}}>
+                  SECURITY
+                </span>
               </div>
-            ))}
+              <h3 className="text-2xl font-bold text-white mb-4" style={{textShadow: '0 0 15px rgba(139, 92, 246, 0.2)'}}>6-Layer Quantum Security</h3>
+              <p className="text-gray-400 leading-relaxed">
+                Full immunity against quantum computer attacks with NIST-approved post-quantum cryptography (CRYSTALS-Kyber, Dilithium, SPHINCS+).
+              </p>
+            </div>
+          </div>
+
+          <div className="security-card-glow bg-gray-900/80 border border-gray-800 rounded-2xl p-8 hover:border-purple-500/40 transition-all relative overflow-hidden group">
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative">
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-14 h-14 bg-purple-500/10 border border-purple-500/30 rounded-xl flex items-center justify-center" style={{boxShadow: '0 0 25px rgba(139, 92, 246, 0.2), inset 0 0 15px rgba(139, 92, 246, 0.05)'}}>
+                  <svg className="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{filter: 'drop-shadow(0 0 8px rgba(139, 92, 246, 0.7))'}}>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                  </svg>
+                </div>
+                <span className="text-xs font-bold text-gray-400 bg-gray-800 border border-gray-700 px-3 py-1 rounded-full">
+                  CONSENSUS
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4" style={{textShadow: '0 0 15px rgba(6, 182, 212, 0.2)'}}>DAG Consensus Protocol</h3>
+              <p className="text-gray-400 leading-relaxed">
+                Directed Acyclic Graph structure enabling parallel transaction processing, &lt;0.001s finality, and blockless unlimited scalability.
+              </p>
+            </div>
           </div>
         </div>
       </div>

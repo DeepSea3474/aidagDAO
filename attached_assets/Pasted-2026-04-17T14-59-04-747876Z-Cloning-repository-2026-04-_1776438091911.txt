@@ -1,0 +1,55 @@
+2026-04-17T14:59:04.747876Z	Cloning repository...
+2026-04-17T14:59:06.118007Z	From https://github.com/DeepSea3474/aidag-chain
+2026-04-17T14:59:06.118367Z	 * branch            e494e2a371e9c56b206c4bb70b2be6bcfd72e9da -> FETCH_HEAD
+2026-04-17T14:59:06.118449Z	
+2026-04-17T14:59:06.342028Z	HEAD is now at e494e2a Update wallet connection logic to improve user experience
+2026-04-17T14:59:06.342488Z	
+2026-04-17T14:59:06.387264Z	
+2026-04-17T14:59:06.387683Z	Using v2 root directory strategy
+2026-04-17T14:59:06.401399Z	Success: Finished cloning repository files
+2026-04-17T14:59:08.747356Z	Checking for configuration in a Wrangler configuration file (BETA)
+2026-04-17T14:59:08.747809Z	
+2026-04-17T14:59:09.841251Z	No Wrangler configuration file found. Continuing.
+2026-04-17T14:59:10.965453Z	Trying to update node-build... ok
+2026-04-17T14:59:11.027945Z	To follow progress, use 'tail -f /tmp/node-build.20260417145911.803.log' or pass --verbose
+2026-04-17T14:59:11.085039Z	Downloading node-v20.20.0-linux-x64.tar.gz...
+2026-04-17T14:59:13.736327Z	
+2026-04-17T14:59:14.782894Z	
+2026-04-17T14:59:33.913543Z	npm warn deprecated next@14.1.0: This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details.
+2026-04-17T14:59:34.106168Z	
+2026-04-17T14:59:35.149812Z	⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+2026-04-17T14:59:35.154965Z	Attention: Next.js now collects completely anonymous telemetry regarding usage.
+2026-04-17T14:59:35.155198Z	This information is used to shape Next.js' roadmap and prioritize features.
+2026-04-17T14:59:35.155297Z	You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+2026-04-17T14:59:35.155396Z	https://nextjs.org/telemetry
+2026-04-17T14:59:35.155439Z	
+2026-04-17T14:59:35.242360Z	   ▲ Next.js 14.1.0
+2026-04-17T14:59:35.242766Z	
+2026-04-17T14:59:35.318884Z	   Creating an optimized production build ...
+2026-04-17T15:00:02.239598Z	 ✓ Compiled successfully
+2026-04-17T15:00:09.593365Z	
+2026-04-17T15:00:09.593568Z	./app/presale/page.tsx:112:14
+2026-04-17T15:00:09.593815Z	Type error: Property 'refresh' does not exist on type 'WalletContextValue'.
+2026-04-17T15:00:09.594036Z	
+2026-04-17T15:00:09.594255Z	[0m [90m 110 |[39m       setTxHash(tx)[33m;[39m[0m
+2026-04-17T15:00:09.594442Z	[0m [90m 111 |[39m       setTxStep([32m'done'[39m)[33m;[39m[0m
+2026-04-17T15:00:09.594525Z	[0m[31m[1m>[22m[39m[90m 112 |[39m       wallet[33m.[39mrefresh()[33m;[39m[0m
+2026-04-17T15:00:09.594992Z	[0m [90m     |[39m              [31m[1m^[22m[39m[0m
+2026-04-17T15:00:09.595375Z	[0m [90m 113 |[39m     } [36mcatch[39m (e[33m:[39m any) {[0m
+2026-04-17T15:00:09.597396Z	[0m [90m 114 |[39m       setTxError(e[33m?[39m[33m.[39mmessage [33m||[39m [32m'Transaction failed'[39m)[33m;[39m[0m
+2026-04-17T15:00:09.599712Z	[0m [90m 115 |[39m       setTxStep([32m'error'[39m)[33m;[39m[0m
+2026-04-17T15:00:09.599858Z	Failed: Error while executing user command. Exited with error code: 1
+2026-04-17T15:00:09.604001Z	Failed: build command exited with code: 1
+2026-04-17T15:00:09.593365Z	
+2026-04-17T15:00:09.593568Z	./app/presale/page.tsx:112:14
+2026-04-17T15:00:09.593815Z	Type error: Property 'refresh' does not exist on type 'WalletContextValue'.
+2026-04-17T15:00:09.594036Z	
+2026-04-17T15:00:09.594255Z	[0m [90m 110 |[39m       setTxHash(tx)[33m;[39m[0m
+2026-04-17T15:00:09.594442Z	[0m [90m 111 |[39m       setTxStep([32m'done'[39m)[33m;[39m[0m
+2026-04-17T15:00:09.594525Z	[0m[31m[1m>[22m[39m[90m 112 |[39m       wallet[33m.[39mrefresh()[33m;[39m[0m
+2026-04-17T15:00:09.594992Z	[0m [90m     |[39m              [31m[1m^[22m[39m[0m
+2026-04-17T15:00:09.595375Z	[0m [90m 113 |[39m     } [36mcatch[39m (e[33m:[39m any) {[0m
+2026-04-17T15:00:09.597396Z	[0m [90m 114 |[39m       setTxError(e[33m?[39m[33m.[39mmessage [33m||[39m [32m'Transaction failed'[39m)[33m;[39m[0m
+2026-04-17T15:00:09.599712Z	[0m [90m 115 |[39m       setTxStep([32m'error'[39m)[33m;[39m[0m
+2026-04-17T15:00:09.599858Z	Failed: Error while executing user command. Exited with error code: 1
+2026-04-17T15:00:09.604001Z	Failed: build command exited with code: 1

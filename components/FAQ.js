@@ -2,36 +2,36 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "AIDAG Chain nedir?",
-    answer: "AIDAG Chain, kripto tarihinde tam otonom olarak yönetilen ilk projedir. SoulwareAI yapay zekası tarafından yönetilir, kurucu müdahalesi ve insan müdahalesi YOKTUR. Quantum güvenlikli, BSC ve Ethereum uyumlu bir ekosistemdir."
+    question: "What is AIDAG Chain?",
+    answer: "AIDAG Chain is the first fully autonomously managed project in crypto history. It is managed by SoulwareAI artificial intelligence - there is absolutely NO founder or human intervention. It is a quantum-secure, BSC and Ethereum compatible ecosystem."
   },
   {
-    question: "Ön satışa nasıl katılabilirim?",
-    answer: "1) Cüzdanınızı bağlayın (MetaMask, Trust Wallet, Coinbase vb.), 2) DAO üyeliği için $5 ödeme yapabilirsiniz (isteğe bağlı), 3) BNB miktarı girin ve 'Satın Al' butonuna tıklayın. İşlem otomatik olarak gerçekleşir."
+    question: "How do I join the presale?",
+    answer: "1) Connect your wallet (MetaMask, Trust Wallet, Coinbase, etc.), 2) Optionally join the DAO for $10, 3) Enter BNB amount and click 'Buy Now'. The transaction executes automatically with 60% to operational fund and 40% to DAO/liquidity."
   },
   {
-    question: "Token dağılımı nasıl yapılıyor?",
-    answer: "Ön satışta ödenen miktarın %60'ı kurucu cüzdanına, %40'ı ise SoulwareAI + DAO likidite havuzuna aktarılır. Bu dağılım akıllı kontrat ile otomatik gerçekleşir."
+    question: "How is revenue distributed?",
+    answer: "60% of all presale revenue goes to the operational fund (development, hosting, infrastructure costs) and 40% goes to SoulwareAI + DAO liquidity pool. This distribution is executed autonomously via smart contracts."
   },
   {
-    question: "DAO üyeliği ne sağlar?",
-    answer: "$5 karşılığında DAO üyesi olursunuz. Üyeler teklif oluşturabilir, oylamaya katılabilir ve SoulwareAI ile doğrudan etkileşime geçebilir. Tüm kararlar topluluk oylamasıyla alınır."
+    question: "What does DAO membership provide?",
+    answer: "For a one-time $10 fee, you become a DAO member. Members can create proposals, participate in voting, and interact directly with SoulwareAI. All decisions are made through community voting."
   },
   {
-    question: "Quantum güvenlik ne demek?",
-    answer: "AIDAG Chain, gelecekteki kuantum bilgisayar tehditlerine karşı koruma sağlayan quantum-resistant algoritmalar kullanır. Bu, uzun vadeli güvenlik garantisi sağlar."
+    question: "What is quantum security?",
+    answer: "AIDAG Chain uses quantum-resistant algorithms (CRYSTALS-Kyber, Dilithium, SPHINCS+) that protect against future quantum computer threats. This ensures long-term security even when quantum computers become powerful enough to break traditional encryption."
   },
   {
-    question: "Hangi cüzdanları kullanabilirim?",
-    answer: "MetaMask, Trust Wallet, Coinbase Wallet, WalletConnect, TokenPocket ve Math Wallet desteklenmektedir. BSC veya Ethereum ağına bağlanabilirsiniz."
+    question: "Which wallets are supported?",
+    answer: "MetaMask, Trust Wallet, Coinbase Wallet, WalletConnect, TokenPocket, and Math Wallet are supported. You can connect to BSC or Ethereum network."
   },
   {
-    question: "Listeleme fiyatı ne olacak?",
-    answer: "Ön satış fiyatı $0.078, listeleme fiyatı ise $0.12 olacaktır. Bu, erken katılımcılara %54 kazanç potansiyeli sunar."
+    question: "What will the listing price be?",
+    answer: "Stage 1 presale price is $0.078, Stage 2 is $0.098, and the DEX/CEX listing price will be $0.12. This offers early participants up to +54% potential gain."
   },
   {
-    question: "SoulwareAI ile nasıl iletişime geçebilirim?",
-    answer: "Sağ alt köşedeki chat butonuna tıklayarak SoulwareAI ile doğrudan konuşabilirsiniz. AI, sorularınızı yanıtlar ve AIDAG Chain hakkında bilgi verir."
+    question: "How can I talk to SoulwareAI?",
+    answer: "Click the chat button in the bottom right corner to talk directly with SoulwareAI. The AI answers your questions and provides information about AIDAG Chain, presale, DAO, and more."
   }
 ];
 
@@ -43,10 +43,10 @@ export default function FAQ({ id = "faq" }) {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            <span className="logo-aidag">Sıkça</span>{" "}
-            <span className="text-white">Sorulan Sorular</span>
+            <span className="logo-aidag">Frequently</span>{" "}
+            <span className="text-white">Asked Questions</span>
           </h2>
-          <p className="text-gray-400">AIDAG Chain hakkında merak edilenler</p>
+          <p className="text-gray-400">Everything you need to know about AIDAG Chain</p>
         </div>
 
         <div className="space-y-4">

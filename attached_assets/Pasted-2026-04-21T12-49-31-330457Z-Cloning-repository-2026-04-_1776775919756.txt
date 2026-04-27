@@ -1,0 +1,110 @@
+2026-04-21T12:49:31.330457Z	Cloning repository...
+2026-04-21T12:49:33.166407Z	From https://github.com/DeepSea3474/aidag-chain
+2026-04-21T12:49:33.166855Z	 * branch            95039c2062a083ff8767f4f69288ca8bfb0c66c2 -> FETCH_HEAD
+2026-04-21T12:49:33.166947Z	
+2026-04-21T12:49:33.402098Z	HEAD is now at 95039c2 Fix Cloudflare build TS errors: add as const to LANGS, type EVENT_TYPE_META icon
+2026-04-21T12:49:33.402732Z	
+2026-04-21T12:49:33.458617Z	
+2026-04-21T12:49:33.459403Z	Using v2 root directory strategy
+2026-04-21T12:49:33.478224Z	Success: Finished cloning repository files
+2026-04-21T12:49:34.383712Z	Restoring from dependencies cache
+2026-04-21T12:49:34.412264Z	Restoring from build output cache
+2026-04-21T12:49:36.051408Z	Success: Build output restored from build cache.
+2026-04-21T12:49:52.937813Z	Success: Dependencies restored from build cache.
+2026-04-21T12:49:53.948926Z	Checking for configuration in a Wrangler configuration file (BETA)
+2026-04-21T12:49:53.949359Z	
+2026-04-21T12:49:53.949931Z	Found wrangler.toml file. Reading build configuration...
+2026-04-21T12:49:53.955956Z	pages_build_output_dir: out
+2026-04-21T12:49:53.95624Z	Build environment variables: (none found)
+2026-04-21T12:49:55.061484Z	Successfully read the Wrangler configuration file.
+2026-04-21T12:49:55.234116Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2026-04-21T12:49:55.234718Z	Installing project dependencies: npm clean-install --progress=false
+2026-04-21T12:50:13.286339Z	npm warn deprecated next@14.1.0: This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details.
+2026-04-21T12:50:13.47611Z	
+2026-04-21T12:50:13.4764Z	added 321 packages, and audited 322 packages in 18s
+2026-04-21T12:50:13.476476Z	
+2026-04-21T12:50:13.476522Z	57 packages are looking for funding
+2026-04-21T12:50:13.47659Z	  run `npm fund` for details
+2026-04-21T12:50:13.579828Z	
+2026-04-21T12:50:13.580199Z	4 vulnerabilities (3 moderate, 1 critical)
+2026-04-21T12:50:13.580349Z	
+2026-04-21T12:50:13.580452Z	To address issues that do not require attention, run:
+2026-04-21T12:50:13.58052Z	  npm audit fix
+2026-04-21T12:50:13.580591Z	
+2026-04-21T12:50:13.580642Z	To address all issues, run:
+2026-04-21T12:50:13.58068Z	  npm audit fix --force
+2026-04-21T12:50:13.58072Z	
+2026-04-21T12:50:13.580765Z	Run `npm audit` for details.
+2026-04-21T12:50:13.710259Z	Executing user command: npm run build
+2026-04-21T12:50:13.995938Z	
+2026-04-21T12:50:13.996264Z	> aidagdao@1.0.0 build
+2026-04-21T12:50:13.996362Z	> next build
+2026-04-21T12:50:13.996465Z	
+2026-04-21T12:50:14.66517Z	   ▲ Next.js 14.1.0
+2026-04-21T12:50:14.665521Z	
+2026-04-21T12:50:14.745664Z	   Creating an optimized production build ...
+2026-04-21T12:50:24.559847Z	 ✓ Compiled successfully
+2026-04-21T12:50:24.560592Z	   Linting and checking validity of types ...
+2026-04-21T12:50:32.021016Z	   Collecting page data ...
+2026-04-21T12:50:34.69237Z	   Generating static pages (0/15) ...
+2026-04-21T12:50:34.791561Z	   Generating static pages (3/15) 
+2026-04-21T12:50:35.040289Z	
+2026-04-21T12:50:35.048407Z	 ⚠ metadata.metadataBase is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+2026-04-21T12:50:35.142898Z	   Generating static pages (7/15) 
+2026-04-21T12:50:35.162478Z	
+2026-04-21T12:50:35.163996Z	 ⚠ metadata.metadataBase is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+2026-04-21T12:50:35.234939Z	
+2026-04-21T12:50:35.236806Z	 ⚠ metadata.metadataBase is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+2026-04-21T12:50:35.394832Z	   Generating static pages (11/15) 
+2026-04-21T12:50:35.457945Z	 ✓ Generating static pages (15/15) 
+2026-04-21T12:50:35.99876Z	   Finalizing page optimization ...
+2026-04-21T12:50:35.999052Z	   Collecting build traces ...
+2026-04-21T12:50:44.283561Z	
+2026-04-21T12:50:44.287013Z	Route (app)                              Size     First Load JS
+2026-04-21T12:50:44.287206Z	┌ ○ /                                    24.7 kB         145 kB
+2026-04-21T12:50:44.287535Z	├ ○ /_not-found                          891 B          86.8 kB
+2026-04-21T12:50:44.28768Z	├ λ /api/chat                            0 B                0 B
+2026-04-21T12:50:44.287981Z	├ ○ /api/presale/stats                   0 B                0 B
+2026-04-21T12:50:44.288036Z	├ λ /api/soulware/command                0 B                0 B
+2026-04-21T12:50:44.288076Z	├ λ /api/soulware/status                 0 B                0 B
+2026-04-21T12:50:44.288199Z	├ λ /api/soulware/verify                 0 B                0 B
+2026-04-21T12:50:44.288258Z	├ ○ /chat                                4.38 kB        97.1 kB
+2026-04-21T12:50:44.288336Z	├ ○ /dao                                 8.53 kB         129 kB
+2026-04-21T12:50:44.288405Z	├ ○ /lsc                                 14.4 kB         140 kB
+2026-04-21T12:50:44.288454Z	├ ○ /presale                             10.3 kB         131 kB
+2026-04-21T12:50:44.288494Z	├ ○ /soulware                            9.46 kB         130 kB
+2026-04-21T12:50:44.288527Z	└ ○ /sovereign                           4.6 kB         97.4 kB
+2026-04-21T12:50:44.28856Z	+ First Load JS shared by all            85.9 kB
+2026-04-21T12:50:44.288604Z	  ├ chunks/8069-0ec87427c96e2847.js      29.1 kB
+2026-04-21T12:50:44.288668Z	  ├ chunks/fd9d1056-6b39aeaf735beff8.js  53.4 kB
+2026-04-21T12:50:44.288705Z	  └ other shared chunks (total)          3.41 kB
+2026-04-21T12:50:44.288758Z	
+2026-04-21T12:50:44.288797Z	
+2026-04-21T12:50:44.288859Z	○  (Static)   prerendered as static content
+2026-04-21T12:50:44.28892Z	λ  (Dynamic)  server-rendered on demand using Node.js
+2026-04-21T12:50:44.288995Z	
+2026-04-21T12:50:44.359512Z	Finished
+2026-04-21T12:50:45.070727Z	Checking for configuration in a Wrangler configuration file (BETA)
+2026-04-21T12:50:45.071239Z	
+2026-04-21T12:50:45.071315Z	Found wrangler.toml file. Reading build configuration...
+2026-04-21T12:50:45.075987Z	pages_build_output_dir: out
+2026-04-21T12:50:45.076123Z	Build environment variables: (none found)
+2026-04-21T12:50:46.17152Z	Successfully read the Wrangler configuration file.
+2026-04-21T12:50:46.172625Z	Found Functions directory at /functions. Uploading.
+2026-04-21T12:50:46.178315Z	 ⛅️ wrangler 3.101.0
+2026-04-21T12:50:46.178519Z	-------------------
+2026-04-21T12:50:46.989065Z	✨ Compiled Worker successfully
+2026-04-21T12:50:48.033841Z	Validating asset output directory
+2026-04-21T12:50:50.775081Z	Deploying your site to Cloudflare's global network...
+2026-04-21T12:50:51.405295Z	Parsed 0 valid redirect rules.
+2026-04-21T12:50:52.797648Z	Uploading... (146/162)
+2026-04-21T12:50:53.168448Z	Uploading... (151/162)
+2026-04-21T12:50:53.224242Z	Uploading... (156/162)
+2026-04-21T12:50:53.230003Z	Uploading... (162/162)
+2026-04-21T12:50:53.230165Z	✨ Success! Uploaded 16 files (146 already uploaded) (0.86 sec)
+2026-04-21T12:50:53.230251Z	
+2026-04-21T12:50:53.866427Z	✨ Upload complete!
+2026-04-21T12:50:55.307268Z	Uploading to build output cache
+2026-04-21T12:50:58.917551Z	Success: Build output uploaded to build cache.
+2026-04-21T12:50:59.897272Z	Success: Assets published!
+2026-04-21T12:51:02.196873Z	Success: Your site was deployed!

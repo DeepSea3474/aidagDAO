@@ -1,23 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  swcMinify: false, // Rust tabanlı derleyiciyi kapatır (Segmentation fault'un ana sebebi)
-  
-  experimental: {
-    workerThreads: false, // Build işlemini tek bir iş parçacığına indirir (RAM tasarrufu)
-    cpus: 1,              // İşlemci kullanımını kısıtlar
-    forceSwcTransforms: false
-  },
-
-  // Resim optimizasyonunu kapatır (Sharp kütüphanesi Termux'ta genelde çöker)
-  images: {
-    unoptimized: true
-  },
-
-  webpack: (config) => {
-    // Önbelleği kapatır, böylece hatalı build artıkları temizlenir
-    config.cache = false;
-    return config;
-  }
-}
+  // NOTE: Static export removed because Task #3 introduced a server-side
+  // autonomous engine (lib/server/orchestrator.ts) that requires Node runtime
+  // and dynamic API routes. Deployment compatibility is handled in the
+  // follow-up "Cloudflare uyum denetimi + canlıya alma" task.
+  images: { unoptimized: true },
+};
 
 module.exports = nextConfig;

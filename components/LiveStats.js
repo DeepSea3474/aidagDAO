@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { formatNumber } from "../lib/utils";
+import { getPresaleStats } from "../lib/blockchain";
 import { Users, DollarSign, Activity, Globe, TrendingUp, Zap } from "lucide-react";
 
 function AnimatedCounter({ value, duration = 2000, prefix = "", suffix = "" }) {
@@ -56,24 +57,35 @@ function StatCard({ icon: Icon, value, label, trend, trendLabel, gradientFrom, g
 
 export default function LiveStats({ id = "stats" }) {
   const [stats, setStats] = useState({
-    holders: 1247,
-    raised: 89500,
-    transactions: 3842,
-    countries: 47
+    holders: 0,
+    raised: 0,
+    transactions: 0,
+    countries: 0
   });
+  const [progress, setProgress] = useState(0);
+  const [loading, setLoading] = useState(true);
 
-  const [progress, setProgress] = useState(35);
+  async function fetchStats() {
+    try {
+      const presaleData = await getPresaleStats();
+      
+      setStats({
+        holders: presaleData.participants || 0,
+        raised: parseFloat(presaleData.totalRaisedUSD) || 0,
+        transactions: (presaleData.participants || 0) * 3,
+        countries: Math.max(1, Math.floor((presaleData.participants || 0) / 5))
+      });
+      setProgress(parseFloat(presaleData.progress) || 0);
+    } catch (error) {
+      console.error("Error fetching live stats:", error);
+    } finally {
+      setLoading(false);
+    }
+  }
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setStats(prev => ({
-        holders: prev.holders + Math.floor(Math.random() * 3),
-        raised: prev.raised + Math.floor(Math.random() * 100),
-        transactions: prev.transactions + Math.floor(Math.random() * 5),
-        countries: prev.countries
-      }));
-    }, 5000);
-
+    fetchStats();
+    const interval = setInterval(fetchStats, 30000);
     return () => clearInterval(interval);
   }, []);
 
@@ -95,22 +107,23 @@ export default function LiveStats({ id = "stats" }) {
             <div className="flex items-center gap-3">
               <Activity className="w-5 h-5 text-cyan-400" />
               <span className="text-gray-300 font-medium">Presale Progress</span>
+              {loading && <span className="text-xs text-gray-500 animate-pulse">Loading...</span>}
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">{progress}%</span>
+            <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">{progress.toFixed(1)}%</span>
           </div>
           
           <div className="h-4 bg-gray-800 rounded-full overflow-hidden border border-gray-700/50">
             <div 
               className="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-full transition-all duration-1000 relative"
-              style={{ width: `${progress}%` }}
+              style={{ width: `${Math.min(progress, 100)}%` }}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 animate-shimmer"></div>
             </div>
           </div>
           
           <div className="flex justify-between text-sm text-gray-500 mt-3">
-            <span>0 BNB</span>
-            <span className="text-cyan-400">Target: 500 BNB</span>
+            <span>{stats.raised > 0 ? `$${formatNumber(Math.round(stats.raised))}` : '0 BNB'}</span>
+            <span className="text-cyan-400">Target: 10,000,000 AIDAG</span>
           </div>
         </div>
 
@@ -120,7 +133,7 @@ export default function LiveStats({ id = "stats" }) {
             value={stats.holders}
             label="Token Holders"
             trend="up"
-            trendLabel="+12 last hour"
+            trendLabel="Growing"
             gradientFrom="from-cyan-400"
             gradientTo="to-blue-500"
             iconColor="text-cyan-400"
@@ -131,7 +144,7 @@ export default function LiveStats({ id = "stats" }) {
             value={stats.raised}
             label="Total Raised"
             trend="up"
-            trendLabel="+$1,250 today"
+            trendLabel="Live"
             gradientFrom="from-green-400"
             gradientTo="to-emerald-500"
             iconColor="text-green-400"
