@@ -6,6 +6,7 @@ import { useState, useEffect, useCallback } from "react";
 import WalletButton from "../components/WalletButton";
 import Navbar from "../components/Navbar";
 import Icon from "../components/Icon";
+import PresaleWidget from "../components/PresaleWidget";
 import LiveEcosystem from '../components/LiveEcosystem';
 import EcosystemCTA from '../components/EcosystemCTA';
 import SoulwareLivePanel from '../components/SoulwareLivePanel';
