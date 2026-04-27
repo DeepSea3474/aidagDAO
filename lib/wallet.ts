@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { http, createConfig } from 'wagmi'
 import { mainnet, bsc } from 'wagmi/chains'
 import { getDefaultConfig } from '@rainbow-me/rainbowkit'

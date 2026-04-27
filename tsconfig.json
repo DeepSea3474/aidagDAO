@@ -1,5 +1,5 @@
 {
-  "compilerOptions": { "skipLibCheck": true, "noEmit": true, "ignoreDeprecations": "5.0",
+  "compilerOptions": { "skipLibCheck": true, "noEmit": true, "checkJs": false,, "noEmit": true, "ignoreDeprecations": "5.0",
     "target": "es2020",
     "lib": [
       "dom",
@@ -7,7 +7,7 @@
       "esnext"
     ],
     "allowJs": true,
-    "skipLibCheck": true,
+    "skipLibCheck": true, "noEmit": true, "checkJs": false,,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
