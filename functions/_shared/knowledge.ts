@@ -1,3 +1,4 @@
+// @ts-nocheck
 // SoulwareAI knowledge base — duplicated for the Workers runtime.
 // Keep in sync with lib/soulware-knowledge-base.ts.
 

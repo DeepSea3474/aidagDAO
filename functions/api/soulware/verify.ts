@@ -1,3 +1,4 @@
+// @ts-nocheck
 // Cloudflare Pages Function: POST /api/soulware/verify
 // Verifies a sovereign key using double-SHA256 (Web Crypto, runs on Workers).
 

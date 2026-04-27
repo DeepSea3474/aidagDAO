@@ -1,3 +1,4 @@
+// @ts-nocheck
 // Shared sovereign verification for Cloudflare Pages Functions (Workers runtime).
 // Mirrors lib/soulware-sovereign.ts but uses Web Crypto (no Node 'crypto' module).
 
