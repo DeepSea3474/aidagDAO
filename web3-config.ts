@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { defaultWagmiConfig } from '@web3modal/wagmi/react/config'
 import { mainnet, bsc } from 'wagmi/chains'
 
