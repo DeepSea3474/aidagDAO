@@ -10,18 +10,23 @@ import Navbar from "../components/Navbar";
 import Icon from "../components/Icon";
 import PresaleWidget from "../components/PresaleWidget";
 
-// Dinamik Bileşen Tanımlamaları (SSR kapalı)
+// Eksik Tanımlamalar (Hata Verenler)
+const BSCSCAN_TOKEN_URL = "https://bscscan.com/token/0x..."; // Burayı sonra gerçek adresle güncelleyebilirsin
+const FEATURE_ICONS = {
+  dao: "M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5",
+  bsc: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z",
+  lock: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
+  lsc: "M13 10V3L4 14h7v7l9-11h-7z"
+};
+
+// Dinamik Bileşen Tanımlamaları
 const NeuralBrain = dynamic(() => import('../components/NeuralBrain'), { ssr: false });
 const DAGNetwork = dynamic(() => import('../components/DAGNetwork'), { ssr: false });
 const GenesisHeartbeat = dynamic(() => import('../components/GenesisHeartbeat'), { ssr: false });
 
-// Cloudflare Variables'dan gelen ID
+// WalletConnect ID
 const projectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || '9081a95e21975e5330368143948e652d';
 
-// ── 10-Language system ────────────────────────────────────────────────────────
-const LANGS = [
-  { code: 'en', flag: '🇬🇧', name: 'English' },
-  { code: 'tr', flag: '🇹🇷', name: 'Türkçe' },
   { code: 'de', flag: '🇩🇪', name: 'Deutsch' },
   { code: 'fr', flag: '🇫🇷', name: 'Français' },
   { code: 'es', flag: '🇪🇸', name: 'Español' },
