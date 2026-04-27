@@ -1,5 +1,5 @@
 {
-  "compilerOptions": {
+  "compilerOptions": { "skipLibCheck": true, "noEmit": true, "ignoreDeprecations": "5.0",
     "target": "es2020",
     "lib": [
       "dom",
