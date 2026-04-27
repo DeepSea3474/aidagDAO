@@ -1,20 +1,28 @@
-import '../styles/globals.css'
-import { WagmiProvider } from 'wagmi'
-import { RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { config } from '../lib/wallet'
+import { getDefaultConfig, RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
+import { WagmiConfig, createConfig, configureChains } from 'wagmi';
+import { bsc, mainnet } from 'wagmi/chains';
+import { publicProvider } from 'wagmi/providers/public';
+import '../src/config/i18n';
 
-const queryClient = new QueryClient()
+// RainbowKit v1 / Wagmi v1 Yapılandırması
+const { chains, publicClient } = configureChains(
+  [bsc, mainnet],
+  [publicProvider()]
+);
 
-export default function App({ Component, pageProps }) {
+const config = createConfig({
+  autoConnect: true,
+  publicClient,
+});
+
+function MyApp({ Component, pageProps }) {
   return (
-    <WagmiProvider config={config}>
-      <QueryClientProvider client={queryClient}>
-        <RainbowKitProvider theme={darkTheme()}>
-          <Component {...pageProps} />
-        </RainbowKitProvider>
-      </QueryClientProvider>
-    </WagmiProvider>
-  )
+    <WagmiConfig config={config}>
+      <RainbowKitProvider chains={chains} theme={darkTheme()} modalSize="compact">
+        <Component {...pageProps} />
+      </RainbowKitProvider>
+    </WagmiConfig>
+  );
 }
 
+export default MyApp;
