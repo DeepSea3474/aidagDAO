@@ -1,9 +1,0 @@
-aidag-replit/
-.next/
-node_modules/
-out/
-.vercel/
-workspace/
-*.zip
-tsconfig.tsbuildinfo
-.data/

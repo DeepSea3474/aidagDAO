@@ -1,5 +1,0 @@
-.next/cache
-.next/server/**/*.map
-.next/static/chunks/*.map
-.next/static/chunks/*.pack
-webpack/client-production/*.pack
