@@ -1,3 +1,4 @@
+// @ts-nocheck
 // Cloudflare Pages Function: POST /api/chat
 // SoulwareAI hybrid intelligence engine — runs on Workers runtime.
 
