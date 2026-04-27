@@ -1,17 +1,17 @@
 'use client';
+import { useState, useEffect, useCallback } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-import { useState, useEffect, useCallback } from "react";
+
+// Proje Bileşenleri
 import WalletButton from "../components/WalletButton";
 import Navbar from "../components/Navbar";
 import Icon from "../components/Icon";
 import PresaleWidget from "../components/PresaleWidget";
-import LiveEcosystem from '../components/LiveEcosystem';
-import EcosystemCTA from '../components/EcosystemCTA';
-import SoulwareLivePanel from '../components/SoulwareLivePanel';
-import { useChainData } from '../lib/useChainData';
-import { useLang } from '../lib/LanguageContext';
+
+// Cloudflare Variables'dan gelen ID
+const projectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID;
+
 import {
   TOKEN_CONTRACT, BSCSCAN_TOKEN_URL, GITHUB_URL, TELEGRAM_URL, TWITTER_URL,
   PRESALE_STAGE1_PRICE, PRESALE_STAGE2_PRICE, LISTING_PRICE,
