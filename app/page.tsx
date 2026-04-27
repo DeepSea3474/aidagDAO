@@ -1,7 +1,8 @@
 'use client';
-import { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 
 // Proje Bileşenleri
 import WalletButton from "../components/WalletButton";
@@ -9,18 +10,13 @@ import Navbar from "../components/Navbar";
 import Icon from "../components/Icon";
 import PresaleWidget from "../components/PresaleWidget";
 
-// Cloudflare Variables'dan gelen ID
-const projectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID;
-
-import {
-  TOKEN_CONTRACT, BSCSCAN_TOKEN_URL, GITHUB_URL, TELEGRAM_URL, TWITTER_URL,
-  PRESALE_STAGE1_PRICE, PRESALE_STAGE2_PRICE, LISTING_PRICE,
-  MAX_SUPPLY, FOUNDER_COINS, DAO_COINS, TOKENOMICS, ROADMAP, SOULWARE_MODULES,
-} from '../lib/constants';
-
+// Dinamik Bileşen Tanımlamaları (SSR kapalı)
 const NeuralBrain = dynamic(() => import('../components/NeuralBrain'), { ssr: false });
-const DAGNetwork  = dynamic(() => import('../components/DAGNetwork'),  { ssr: false });
+const DAGNetwork = dynamic(() => import('../components/DAGNetwork'), { ssr: false });
 const GenesisHeartbeat = dynamic(() => import('../components/GenesisHeartbeat'), { ssr: false });
+
+// Cloudflare Variables'dan gelen ID
+const projectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || '9081a95e21975e5330368143948e652d';
 
 // ── 10-Language system ────────────────────────────────────────────────────────
 const LANGS = [
