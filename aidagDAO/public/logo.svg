@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00ffff" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#00d4ff" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#0099ff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0066ff" stop-opacity="0"/>
+    </radialGradient>
+    
+    <linearGradient id="spiralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0077aa"/>
+      <stop offset="30%" stop-color="#0099cc"/>
+      <stop offset="60%" stop-color="#00bbee"/>
+      <stop offset="100%" stop-color="#00ddff"/>
+    </linearGradient>
+    
+    <linearGradient id="spiralHighlight" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#004466"/>
+      <stop offset="50%" stop-color="#0088bb"/>
+      <stop offset="100%" stop-color="#00ccff"/>
+    </linearGradient>
+    
+    <filter id="neonGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="blur1"/>
+      <feGaussianBlur stdDeviation="8" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="200" height="200" fill="transparent"/>
+  
+  <circle cx="100" cy="100" r="40" fill="url(#centerGlow)" filter="url(#softGlow)" opacity="0.7">
+    <animate attributeName="opacity" values="0.5;0.8;0.5" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <g filter="url(#neonGlow)">
+    <path
+      d="M 100 25
+         C 145 25, 175 55, 175 100
+         C 175 145, 145 175, 100 175
+         C 55 175, 28 145, 28 100
+         C 28 65, 50 42, 80 38"
+      fill="none"
+      stroke="url(#spiralGradient)"
+      stroke-width="14"
+      stroke-linecap="round"
+      opacity="0.95"
+    >
+      <animate attributeName="stroke-opacity" values="0.85;1;0.85" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+    
+    <path
+      d="M 78 45
+         C 125 40, 160 65, 160 100
+         C 160 140, 130 162, 100 162
+         C 60 162, 42 130, 42 100
+         C 42 72, 60 52, 88 48"
+      fill="none"
+      stroke="url(#spiralGradient)"
+      stroke-width="12"
+      stroke-linecap="round"
+      opacity="0.9"
+    >
+      <animate attributeName="stroke-opacity" values="0.8;0.95;0.8" dur="2s" repeatCount="indefinite"/>
+    </path>
+    
+    <path
+      d="M 86 55
+         C 120 52, 148 72, 148 100
+         C 148 130, 125 150, 100 150
+         C 70 150, 55 125, 55 100
+         C 55 78, 70 62, 92 58"
+      fill="none"
+      stroke="url(#spiralHighlight)"
+      stroke-width="10"
+      stroke-linecap="round"
+      opacity="0.85"
+    >
+      <animate attributeName="stroke-opacity" values="0.75;0.9;0.75" dur="2.2s" repeatCount="indefinite"/>
+    </path>
+    
+    <path
+      d="M 90 68
+         C 115 65, 135 80, 135 100
+         C 135 122, 118 138, 100 138
+         C 78 138, 66 118, 66 100
+         C 66 82, 78 70, 95 68"
+      fill="none"
+      stroke="url(#spiralHighlight)"
+      stroke-width="8"
+      stroke-linecap="round"
+      opacity="0.9"
+    >
+      <animate attributeName="stroke-opacity" values="0.85;1;0.85" dur="1.8s" repeatCount="indefinite"/>
+    </path>
+    
+    <path
+      d="M 93 78
+         C 112 76, 125 88, 125 100
+         C 125 115, 112 125, 100 125
+         C 85 125, 77 112, 77 100
+         C 77 88, 85 80, 98 78"
+      fill="none"
+      stroke="#00ccff"
+      stroke-width="6"
+      stroke-linecap="round"
+      opacity="0.95"
+    >
+      <animate attributeName="stroke-opacity" values="0.9;1;0.9" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <circle cx="100" cy="100" r="18" fill="url(#centerGlow)" opacity="0.9">
+    <animate attributeName="r" values="16;20;16" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="100" cy="100" r="8" fill="#00eeff" opacity="0.95">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="100" cy="100" r="4" fill="#ffffff" opacity="1"/>
+</svg>
