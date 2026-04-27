@@ -1,3 +1,4 @@
+"use client";
 import { appKit } from "../lib/wallet";
 
 export default function WalletButton() {

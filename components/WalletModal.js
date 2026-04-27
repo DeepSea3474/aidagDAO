@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { BSC_CHAIN_ID, BSC_CHAIN_CONFIG, ETH_CHAIN_ID, CHAINS } from "../lib/config";
